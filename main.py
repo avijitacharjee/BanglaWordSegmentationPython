@@ -53,6 +53,7 @@ def main():
         # cv2.imshow('abcd',fd)
         # cv2.waitKey()
         labels.append(1)
+    print('Total number of positive data: '+str(num_pos_samples))
     print('Reading negative data....')
     for file in neg_im_listing:
         img = cv2.imread(neg_im_path + '/' + file)
@@ -62,7 +63,7 @@ def main():
                  block_norm='L2', feature_vector=True)
         data.append(fd)
         labels.append(0)
-    print(len(data))
+    print('Total number of negative data: '+str(num_neg_samples))
 
     print(" Constructing training/testing split...")
     trainData, testData, trainLabels, testLabels = train_test_split(
