@@ -93,7 +93,7 @@ def crop(model):
     pixels_per_cell = (8, 8)
     cells_per_block = (2, 2)
     threshold = .3
-    img = cv2.imread('./Data/ddd/imageread/100_13.jpg')
+    img = cv2.imread('./Data/test.jpg')
     cv2.imshow("abc", img)
     cv2.waitKey()
     for i in range(0, 1700-100, 30):
@@ -111,7 +111,7 @@ def crop(model):
             cv2.waitKey()
         else:
             print(i)
-    print("Crop Image Ended")
+    print("Image segmentation ended.")
 
 if (__name__ == '__main__'):
     main()
